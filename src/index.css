@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.grid__item::before {
+  inline-size: var(--line-thickness);
+  block-size: 100vh;
+  inset-inline-start: calc(var(--line-offset) * -1);
+}
