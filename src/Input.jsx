@@ -1,13 +1,8 @@
-import { useState } from "react";
+import { useCalculator } from "./context/context";
 
 function Input() {
-  const [person, setPerson] = useState(1);
-  const [tip, setTip] = useState(0);
-  const [bill, setBill] = useState(0);
-
-  const Tip = (tip * bill) / 100 / person;
-
-  const Total = bill / person + Tip;
+  const { tip, person, bill, setBill, setTip, setPerson, Tip, Total } =
+    useCalculator();
 
   const Disabled = tip <= 0 && "disabled";
   const Disabled1 = tip >= 100 && "disabled";
